@@ -1,0 +1,12 @@
+images
+tmp
+.git
+log
+vendor
+plugins
+fonts
+flash
+public
+tags
+*min.js
+**min.css

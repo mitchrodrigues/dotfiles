@@ -1,0 +1,4 @@
+symlinks/.vim/backup/
+symlinks/.vim/tmp/
+symlinks/.vim/bundle/*
+!symlinks/.vim/bundle/Vundle.vim

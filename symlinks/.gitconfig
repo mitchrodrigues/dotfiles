@@ -1,0 +1,30 @@
+[user]
+	name = Nathan Pearson
+	email = npearson72@gmail.com
+[difftool "Kaleidoscope"]
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[diff]
+	tool = Kaleidoscope
+[difftool]
+	prompt = false
+[mergetool "Kaleidoscope"]
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustExitCode = true
+[mergetool]
+	prompt = false
+[merge]
+	tool = Kaleidoscope
+[push]
+	default = current
+[alias]
+        st = status
+        aa = add -A
+        co = checkout
+[credential]
+	helper = osxkeychain
+[core]
+	excludesfile = /Users/nathan/.gitignore_global
+[pull]
+	default = current
+[fetch]
+	prune = true

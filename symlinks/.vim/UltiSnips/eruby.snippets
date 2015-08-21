@@ -1,0 +1,35 @@
+extends eruby
+
+snippet pry "binding.pry"
+<% require 'pry'; binding.pry %>
+endsnippet
+
+snippet %= "<%= %>"
+<%= ${1} %>
+endsnippet
+
+snippet % "<% %>"
+<% ${1} %>
+endsnippet
+
+snippet end "<% end %>"
+<% end %>
+endsnippet
+
+snippet else "<% else %>"
+<% else %>
+endsnippet
+
+snippet if "<% if %>..<% end %>"
+<% if ${1} %>
+  ${2}
+<% end %>
+endsnippet
+
+snippet ife "<% if %>..<% else %>..<% end %>"
+<% if ${1} %>
+  ${2}
+<% else %>
+  ${3}
+<% end %>
+endsnippet
