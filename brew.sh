@@ -12,6 +12,7 @@ brew update
 
 # Install homebrew packages
 brew install ansible
+brew install autojump
 brew install cmake
 brew install ctags
 brew install git
