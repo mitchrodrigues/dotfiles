@@ -14,4 +14,4 @@ echo "\n"
 echo "============"
 echo "= Homebrew ="
 echo "============"
-sh brew.sh
+sh ~/.dotfiles/brew.sh

@@ -1,9 +1,4 @@
 #!/bin/sh
-#
-# Homebrew
-#
-# This installs some of the common dependencies needed (or at least desired)
-# using Homebrew.
 
 # Check for Homebrew
 if test ! $(which brew)
@@ -31,6 +26,7 @@ brew install vim
 brew tap phinze/homebrew-cask
 brew install brew-cask
 
+brew cask install 1password
 brew cask install dropbox
 brew cask install firefox
 brew cask install google-chrome
