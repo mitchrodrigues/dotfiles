@@ -27,10 +27,8 @@ brew install vim
 brew tap phinze/homebrew-cask
 brew install brew-cask
 
-brew cask install 1password
 brew cask install dropbox
-brew cask install firefox
-brew cask install google-chrome
+brew cask install evernote
 brew cask install iterm2
 brew cask install vagrant
 brew cask install virtualbox
