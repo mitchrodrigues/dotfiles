@@ -31,6 +31,7 @@ brew cask install dropbox
 brew cask install evernote
 brew cask install ksdiff # Kaleidoscope git integration
 brew cask install iterm2
+brew cask install transmission
 brew cask install vagrant
 brew cask install virtualbox
 brew cask install vlc
