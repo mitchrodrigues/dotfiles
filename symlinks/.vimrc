@@ -30,6 +30,8 @@ Plugin 'jtratner/vim-flavored-markdown.git'
 Plugin 'elzr/vim-json'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'pangloss/vim-javascript'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'mxw/vim-jsx'
 
 " Snippets & autocomplete
 Plugin 'sirver/ultisnips'
@@ -237,6 +239,11 @@ set softtabstop=2
 set tabstop=8
 set shiftround
 
+" File type tabstops
+autocmd Filetype html setlocal ts=2 sts=2 sw=2
+autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
+autocmd Filetype javascript setlocal ts=4 sts=4 sw=4
+
 " Formatting, layout, misc tweeks
 set fileencoding=utf-8
 set encoding=utf-8
@@ -247,8 +254,6 @@ set number
 set ruler
 set cursorline
 set cursorcolumn
-" set colorcolumn=100
-" hi ColorColumn ctermbg=235
 set visualbell
 set showcmd
 set laststatus=2
@@ -350,12 +355,16 @@ let g:RubyRunner_keep_focus_key = '<Leader>E'
 let g:RubyRunner_open_below = 1
 let g:RubyRunner_window_size = 10
 
-" Vim-Javascript
-" let g:javascript_enable_domhtmlcss = 1
-" let g:used_javascript_libs = 'jquery,angularjs,angularui,jasmin,coffeescript'
-" let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
-let g:html_indent_inctags = "html,body,head,tbody"
-let g:syntastic_html_checkers=['']
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_javascript_checkers = ['eslint', 'jshint']
 
 " Vroom
 let g:vroom_clear_screen = 0
@@ -365,6 +374,9 @@ let g:vroom_use_bundle_exec = 0
 " Gsearch
 set grepprg=ag
 let g:grep_cmd_opts = '--line-numbers --noheading'
+
+" JavaScript, JSX, CoffeeScript, etc.
+let g:jsx_ext_required = 0 " Allow JSX in normal JS files
 
 " ===================================================
 " CUSTOM FUNCTIONS
@@ -383,14 +395,6 @@ if executable('ag')
   " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
   let g:ctrlp_user_command='ag %s --hidden -l --nocolor -g ""'
 endif
-
-" augroup cline
-"   au!
-"   au WinLeave,InsertEnter * set nocursorline
-"   au WinLeave,InsertEnter * set nocursorcolumn
-"   au WinEnter,InsertLeave * set cursorline
-"   au WinEnter,InsertLeave * set cursorcolumn
-" augroup END
 
 " Sets Quickfix window height
 au FileType qf call AdjustWindowHeight(3, 30)
