@@ -166,7 +166,7 @@ nnoremap <leader>a ggVG
 nnoremap <leader>cd :lcd<space>%:p:h<cr>:pwd<cr>
 
 " Open in pwd
-cnoremap e<space> e <c-r>=expand('%:p:h') . '/'<cr>
+cnoremap e<space><space> e <c-r>=expand('%:p:h') . '/'<cr>
 
 " Copy & paste to clipboard
 vnoremap <leader>y "*y
