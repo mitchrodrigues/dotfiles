@@ -29,6 +29,8 @@ brew tap phinze/homebrew-cask
 brew install brew-cask
 
 brew cask install dropbox
+brew cask install skype
+brew cask install cleanmymac
 brew cask install evernote
 brew cask install ksdiff # Kaleidoscope git integration
 brew cask install iterm2
