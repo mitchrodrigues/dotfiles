@@ -239,11 +239,6 @@ set softtabstop=2
 set tabstop=8
 set shiftround
 
-" File type tabstops
-autocmd Filetype html setlocal ts=2 sts=2 sw=2
-autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
-autocmd Filetype javascript setlocal ts=4 sts=4 sw=4
-
 " Formatting, layout, misc tweeks
 set fileencoding=utf-8
 set encoding=utf-8
@@ -305,6 +300,19 @@ endif
 
 " Don't try to highlight lines longer than 800 characters.
 set synmaxcol=800
+
+" ===================================================
+" Filetype configs
+" ===================================================
+
+" Tabstops
+autocmd Filetype html setlocal ts=2 sts=2 sw=2
+autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
+autocmd Filetype javascript setlocal ts=4 sts=4 sw=4
+
+" Git
+autocmd Filetype gitcommit setlocal spell textwidth=72
+autocmd Filetype gitcommit setlocal colorcolumn=80
 
 " ===================================================
 " PLUGINS
@@ -381,9 +389,6 @@ let g:jsx_ext_required = 0 " Allow JSX in normal JS files
 " ===================================================
 " CUSTOM FUNCTIONS
 " ===================================================
-" Git
-autocmd Filetype gitcommit setlocal spell textwidth=72
-autocmd Filetype gitcommit setlocal colorcolumn=80
 
 " Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
 if executable('ag')
