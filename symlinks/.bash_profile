@@ -4,6 +4,7 @@ alias ll="ls -lha"
 alias ls="ls -lh"
 alias vi="vim"
 alias sb="source ~/.bash_profile"
+# alias npm_uninstall_all="npm uninstall `ls -1 node_modules | tr '/\n' ' '`; npm cache clear"
 
 # Postgres
 alias pgstart="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
