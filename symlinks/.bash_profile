@@ -3,8 +3,7 @@
 alias ll="ls -lha"
 alias ls="ls -lh"
 alias vi="vim"
-alias sb="source ~/.bash_profile"
-# alias npm_uninstall_all="npm uninstall `ls -1 node_modules | tr '/\n' ' '`; npm cache clear"
+alias sb="source $HOME/.bash_profile"
 
 # Postgres
 alias pgstart="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
@@ -16,22 +15,19 @@ alias ta="clear; tmux -CC attach"
 alias tlist="tmux list-sessions"
 alias tkill="tmux kill-server"
 
-# Javascript
-alias pro="./node_modules/protractor/bin/protractor"
-
 # ========== PATH TWEAKS ==========
-export PATH=/usr/local/heroku/bin:$PATH
-export PATH=/usr/local/bin:/usr/local/sbin:/$EC2_HOME/bin:$PATH
+export PATH=/usr/local/bin:/usr/local/sbin:./node_modules/.bin:$PATH
 export RBENV_ROOT=/usr/local/rbenv
 export EDITOR=/usr/local/bin/vim
-export PATH=$PATH:./node_modules/.bin
 
-# ========== OTHER TWEAKS ==========
-unset HISTFILE # This stops writing the .bash_history file
+# ========== CUSTOM ENVS ==========
+export HISTFILE=$HOME/.history/.bash_history
+export NODE_REPL_HISTORY=$HOME/.history/.node_repl_history
+
+# ========== VISUAL TWEAKS ==========
 export CLICOLOR=1
 export LSCOLORS=exfxCxDxBxegedabagacad
 
-# ========== VISUAL TWEAKS ==========
 txtblu='\e[0;34m' # Blue
 txtpur='\e[0;35m' # Purple
 txtrst='\e[0m'    # Text Reset
