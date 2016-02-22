@@ -372,7 +372,12 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-let g:syntastic_javascript_checkers = ['eslint', 'jshint']
+
+" Remember to install proper linters
+" npm install -g eslint
+" npm install -g babel-eslint
+" npm install -g eslint-plugin-react
+let g:syntastic_javascript_checkers = ['eslint']
 
 " Vroom
 let g:vroom_clear_screen = 0
