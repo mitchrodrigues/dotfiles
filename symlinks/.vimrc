@@ -30,7 +30,6 @@ Plugin 'jtratner/vim-flavored-markdown.git'
 Plugin 'elzr/vim-json'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'pangloss/vim-javascript'
-Plugin 'leafgarland/typescript-vim'
 Plugin 'mxw/vim-jsx'
 
 " Snippets & autocomplete
@@ -65,8 +64,6 @@ Plugin 'kana/vim-textobj-user'
 Plugin 'tomtom/tlib_vim'
 
 call vundle#end()
-
-filetype plugin indent on
 
 " ===================================================
 " VISUALS
@@ -304,15 +301,21 @@ set synmaxcol=800
 " ===================================================
 " Filetype configs
 " ===================================================
+filetype plugin indent on
 
 " Tabstops
-autocmd Filetype html setlocal ts=2 sts=2 sw=2
-autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
-autocmd Filetype javascript setlocal ts=4 sts=4 sw=4
+autocmd Filetype html setlocal ts=2 sts=2 sw=2 expandtab
+autocmd Filetype ruby setlocal ts=2 sts=2 sw=2 expandtab
+autocmd Filetype javascript setlocal ts=2 sts=2 sw=2 expandtab
 
 " Git
 autocmd Filetype gitcommit setlocal spell textwidth=72
 autocmd Filetype gitcommit setlocal colorcolumn=80
+
+" Custom Filetypes
+autocmd BufNewFile,BufRead *.jshintrc set ft=javascript
+autocmd BufNewFile,BufRead *.eslintrc set ft=javascript
+
 
 " ===================================================
 " PLUGINS
@@ -374,10 +377,12 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 " Remember to install proper linters
+" npm install -g jshint
 " npm install -g eslint
-" npm install -g babel-eslint
 " npm install -g eslint-plugin-react
-let g:syntastic_javascript_checkers = ['eslint']
+" npm install -g babel-eslint
+autocmd BufNewFile,BufRead *.js let g:syntastic_javascript_checkers = ['jshint']
+autocmd BufNewFile,BufRead *.jsx let g:syntastic_javascript_checkers = ['eslint']
 
 " Vroom
 let g:vroom_clear_screen = 0
