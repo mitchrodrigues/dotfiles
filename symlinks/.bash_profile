@@ -23,6 +23,7 @@ export EDITOR=/usr/local/bin/vim
 # ========== CUSTOM ENVS ==========
 export HISTFILE=$HOME/.history/.bash_history
 export NODE_REPL_HISTORY=$HOME/.history/.node_repl_history
+export MYSQL_HISTFILE=$HOME/.history/.mysql_history
 
 # ========== VISUAL TWEAKS ==========
 export CLICOLOR=1
@@ -49,3 +50,5 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # Autojump
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
