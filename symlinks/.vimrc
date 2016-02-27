@@ -306,7 +306,7 @@ filetype plugin indent on
 " Tabstops
 autocmd Filetype html setlocal ts=2 sts=2 sw=2 expandtab
 autocmd Filetype ruby setlocal ts=2 sts=2 sw=2 expandtab
-autocmd Filetype javascript setlocal ts=2 sts=2 sw=2 expandtab
+autocmd Filetype javascript setlocal ts=4 sts=4 sw=4 expandtab
 
 " Git
 autocmd Filetype gitcommit setlocal spell textwidth=72
@@ -381,8 +381,8 @@ let g:syntastic_check_on_wq = 0
 " npm install -g eslint
 " npm install -g eslint-plugin-react
 " npm install -g babel-eslint
-autocmd BufNewFile,BufRead *.js let g:syntastic_javascript_checkers = ['jshint']
-autocmd BufNewFile,BufRead *.jsx let g:syntastic_javascript_checkers = ['eslint']
+" let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_javascript_checkers = ['eslint']
 
 " Vroom
 let g:vroom_clear_screen = 0

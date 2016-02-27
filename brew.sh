@@ -24,10 +24,6 @@ brew install ruby-build
 brew install unrar
 brew install vim
 
-# Install brew-cask & packages
-brew tap phinze/homebrew-cask
-brew install brew-cask
-
 brew cask install dropbox
 brew cask install skype
 brew cask install cleanmymac
