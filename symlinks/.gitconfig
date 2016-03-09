@@ -1,6 +1,6 @@
 [user]
-	name = Nathan Pearson
-	email = npearson72@gmail.com
+	name = Mitch Rodrigues
+	email = mitch@telmate.com
 [difftool "Kaleidoscope"]
 	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 [diff]
@@ -23,7 +23,7 @@
 [credential]
 	helper = osxkeychain
 [core]
-	excludesfile = /Users/nathan/.gitignore_global
+	excludesfile = $HOME/.gitignore_global
 [pull]
 	default = current
 [fetch]
