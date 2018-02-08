@@ -73,7 +73,7 @@ syntax enable
 " Colorscheme
 set t_Co=256
 set background=dark
-colorscheme pencil
+" colorscheme 
 " Fix for pencil comments
 hi Comment cterm=NONE ctermbg=00 ctermfg=08
 " hi ColorColumn ctermbg=27

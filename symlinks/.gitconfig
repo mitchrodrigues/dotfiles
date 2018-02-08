@@ -1,6 +1,6 @@
 [user]
 	name = Mitch Rodrigues
-	email = mitch@telmate.com
+	email = mitch@corefact.com
 [difftool "Kaleidoscope"]
 	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 [diff]
